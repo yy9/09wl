@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="favicon.ico">
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+		<link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+
+		<link rel="stylesheet" href="assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+
+		<title>零玖网络交流论坛</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Animate core CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/main.css" rel="stylesheet">
+
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<script src="js/ie-emulation-modes-warning.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+					<a class="navbar-brand" href="#">零玖网络</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li class="active">
+							<a href="#about">About</a>
+						</li>
+						<li>
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="starter-template">
+				<label for="basic-url">文件直链地址</label>
+				<div class="input-group">
+					<span class="input-group-addon" id="basic-addon3">https://</span>
+					<input type="url"  class="form-control" id="xurl" value="wx1.vv1234.cn/o_1bnbafcps1na71o376cg16ct1tjta.jpg" placeholder="输入网址" aria-describedby="basic-addon3" required/>
+	
+				</div>
+<!--下拉-->
+			<select id="pip"  data-am-selected>
+				<optgroup label="电信">
+					<option value="http://183.91.33.78/" selected>香港电信</option>
+					<option value="http://">空</option>
+				</optgroup>
+				<optgroup label="联通">
+					<option value="http://140.207.80.4/">上海联通</option>
+					<option value="http://">空</option>
+					<option value="http://">空</option>
+				</optgroup>
+				<optgroup label="移动">
+					<option value="http://">空</option>
+					<option value="http://">空</option>
+					<option value="http://">空 </option>
+				</optgroup>
+				<optgroup label="长宽">
+					<option value="http://">空</option>
+					<option value="http://">空</option>
+					<option value="http://">空 </option>
+				</optgroup>
+			</select>
+			<input type="button" id="startdown" class="am-btn am-btn-secondary btn-loading-example" value="下载" data-am-loading="{loadingText: '下载链接已在新窗口打开'}" />
+<div class="panel panel-default">
+  <div class="panel-body">
+    <p id="showdown"></p>
+  </div>
+</div>
+			
+			</div>
+
+			
+
+		</div>
+		<!-- /.container -->
+
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+			window.jQuery || document.write('<script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"><\/script>')
+		</script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+		<!--[if (gte IE 9)|!(IE)]><!-->
+		<script src="assets/js/jquery.min.js"></script>
+		<!--<![endif]-->
+		<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+		<script src="assets/js/amazeui.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#startdown").click(function() {
+					i = $("#pip").val() + $("#xurl").val();
+					window.open(i, 'New Tab', 'fullscreen=1,z-look=yes,menubar=no,toolbar=no,status=no,scrollbars=no');
+					console.log('URL:' + i);
+					document.getElementById("showdown").innerHTML = '<h3>URL：<a href="' + i + '" target="_blank"> ' + i + ' </a></h3>';
+				});
+			});
+			$('.btn-loading-example').click(function () {
+  var $btn = $(this)
+  $btn.button('loading');
+    setTimeout(function(){
+      $btn.button('reset');
+  }, 3000);
+});
+		</script>
+	</body>
+
+</html>
